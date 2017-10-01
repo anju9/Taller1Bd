@@ -1,0 +1,83 @@
+--a
+create tablespace gofar_travel datafile 
+'gofar_traveler_1.dbf' size 500M,
+'gofar_traveler_2.dbf' size 400M,
+'gofar_traveler_3.dbf' size 100M
+AUTOEXTEND ON NEXT 1000K MAXSIZE 1024M
+EXTENT MANAGEMENT LOCAL 
+SEGMENT SPACE MANAGEMENT AUTO
+ONLINE;
+
+--b
+create tablespace test_purposes datafile
+'test_purposes_1.dbf' size 500M
+AUTOEXTEND ON NEXT 100K MAXSIZE 500M
+EXTENT MANAGEMENT LOCAL 
+SEGMENT SPACE MANAGEMENT AUTO
+ONLINE;
+
+--c
+create undo tablespace undo datafile
+'undo.dbf' size 5M
+AUTOEXTEND OFF;
+
+--3
+alter system set undo_tablespace=undo scope =both;
+
+--4
+
+CREATE USER DBAUSER IDENTIFIED BY DBAUSER
+DEFAULT TABLESPACE  gofar_travel
+TEMPORARY TABLESPACE TEMP
+QUOTA UNLIMITED ON gofar_travel;
+
+--5
+grant dba to dbauser;
+grant connect, resource to dbauser;
+
+--6
+---a
+create profile manager_profile limit
+sessions_per_user 1
+cpu_per_session unlimited
+cpu_per_call unlimited
+connect_time 240
+idle_time 15
+private_sga 20 m
+failed_login_attempts 4
+password_life_time 40
+password_reuse_max 5
+password_lock_time 1
+password_grace_time 2;
+
+---b
+create profile finance_profile limit
+sessions_per_user 1
+cpu_per_session unlimited
+cpu_per_call unlimited
+connect_time 240
+idle_time 3
+private_sga 20 m
+failed_login_attempts 2
+password_life_time 15
+password_reuse_max 5
+password_lock_time 1
+password_grace_time 2;
+
+--c
+create profile development_profile limit 
+sessions_per_user 2
+cpu_per_session unlimited
+cpu_per_call unlimited
+connect_time 240
+idle_time 30
+private_sga 20 m
+failed_login_attempts 1
+password_life_time 100
+password_reuse_max 5
+password_lock_time 1
+password_grace_time 2;
+
+
+--9
+DROP TABLESPACE test_purposes;
