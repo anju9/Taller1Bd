@@ -1,3 +1,9 @@
+--los integrantes del grupo somos:
+--Nayibe Jaramillo.
+--Leidy Ramos
+--Juan Pablo Velez.
+--grupo lunes - miércoles 8 - 10 pm
+
 --a
 create tablespace gofar_travel datafile 
 'gofar_traveler_1.dbf' size 500M,
