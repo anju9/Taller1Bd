@@ -84,6 +84,39 @@ password_reuse_max 5
 password_lock_time 1
 password_grace_time 2;
 
+--7
+CREATE USER UserUno IDENTIFIED BY UserUno
+DEFAULT TABLESPACE  gofar_travel
+PROFILE manager_profile;
+
+GRANT CREATE SESSION TO UserUno;
+
+
+CREATE USER UserDos IDENTIFIED BY UserDos
+DEFAULT TABLESPACE  gofar_travel
+PROFILE finance_profile;
+
+GRANT CREATE SESSION TO UserDos;
+
+
+CREATE USER UserTres IDENTIFIED BY UserTres
+DEFAULT TABLESPACE  gofar_travel
+PROFILE development_profile;
+
+GRANT CREATE SESSION TO UserTres;
+
+CREATE USER UserCuatro IDENTIFIED BY UserCuatro
+DEFAULT TABLESPACE  gofar_travel
+PROFILE DEVELOPMENT;
+
+GRANT CREATE SESSION TO UserCuatro;
+
+--8
+ALTER USER UserUno
+ACCOUNT LOCK ;  
+
+ALTER USER UserDos
+ACCOUNT LOCK ;
 
 --9
 DROP TABLESPACE test_purposes;
