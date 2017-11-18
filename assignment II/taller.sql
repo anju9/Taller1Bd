@@ -2,7 +2,6 @@
 -- Archivo creado  - sábado-noviembre-18-2017   
 --------------------------------------------------------
 DROP VIEW "DBAUSER"."ACCESORIOS";
-DROP VIEW "DBAUSER"."ENCARGADOS_NO_ASIGNADOS";
 DROP VIEW "DBAUSER"."ORDERTODISPLAY";
 DROP TABLE "DBAUSER"."CLIENTES";
 DROP TABLE "DBAUSER"."FACTURA_DETALLE";
@@ -40,7 +39,6 @@ DROP FUNCTION "DBAUSER"."CALCULO_BINARIO";
  inner join opciones op  on v.opcion_id = op.id_opciones 
  inner join vendedores ve on f.vendedor_id = ve.id_vendedor
 ;
-
 --------------------------------------------------------
 --  DDL for View ORDERTODISPLAY
 --------------------------------------------------------
@@ -49,7 +47,7 @@ DROP FUNCTION "DBAUSER"."CALCULO_BINARIO";
   select o.id_opciones,v.marca,o.codigo_opcion,v.fabricante
  from vehiculos v 
  inner join opciones o on v.opcion_id=o.id_opciones
- where unidades_disponibles<5
+ where o.unidades_disponibles<=5
  order by o.id_opciones
 ;
 --------------------------------------------------------
@@ -118,7 +116,7 @@ DROP FUNCTION "DBAUSER"."CALCULO_BINARIO";
    (	"ID_OPCIONES" NUMBER(*,0), 
 	"CODIGO_OPCION" VARCHAR2(100 BYTE), 
 	"DESCRIPCION" VARCHAR2(800 BYTE), 
-	"UNIDADES_DISPONIBLES" NUMBER(*,0), 
+	"UNIDADES_DISPONIBLES" NUMBER(*,0) DEFAULT (30), 
 	"VALOR_VENTA" NUMBER(18,2), 
 	"PROVEEDOR_ID" NUMBER(*,0)
    ) ;
@@ -339,12 +337,12 @@ Insert into DBAUSER.IMPUESTOS (ID_IMPUESTO,DESCRIPCION) values ('10','Impuesto d
 Insert into DBAUSER.IMPUESTOS (ID_IMPUESTO,DESCRIPCION) values ('11','Impuesto de Transmisiones');
 REM INSERTING into DBAUSER.OPCIONES
 SET DEFINE OFF;
-Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('1','10001','Microondas','30','1200000','1');
+Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('1','10001','Microondas','10','1200000','1');
 Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('2','10002','Nevera','30','5600000','2');
-Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('3','10003','Estufa','30','240000','3');
+Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('3','10003','Estufa','3','240000','3');
 Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('4','10004','Licores','30','60000','1');
 Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('5','10005','Silla 1A','30','320000','1');
-Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('6','10006','Silla 1B','30','1200000','2');
+Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('6','10006','Silla 1B','5','1200000','2');
 Insert into DBAUSER.OPCIONES (ID_OPCIONES,CODIGO_OPCION,DESCRIPCION,UNIDADES_DISPONIBLES,VALOR_VENTA,PROVEEDOR_ID) values ('7','10007','Equipo de sonido','30','200000','2');
 REM INSERTING into DBAUSER.PROVEEDORES
 SET DEFINE OFF;
@@ -420,6 +418,118 @@ Insert into DBAUSER.VENDEDORES (ID_VENDEDOR,TIPO_DE_DOCUMENTO_ID,NOMBRE,ESTADO_V
 Insert into DBAUSER.VENDEDORES (ID_VENDEDOR,TIPO_DE_DOCUMENTO_ID,NOMBRE,ESTADO_VENDEDOR) values ('18','3','Susan','Antiguo');
 Insert into DBAUSER.VENDEDORES (ID_VENDEDOR,TIPO_DE_DOCUMENTO_ID,NOMBRE,ESTADO_VENDEDOR) values ('19','2','Hammett','Nuevo');
 Insert into DBAUSER.VENDEDORES (ID_VENDEDOR,TIPO_DE_DOCUMENTO_ID,NOMBRE,ESTADO_VENDEDOR) values ('20','2','Debra','Antiguo');
+REM INSERTING into DBAUSER.ACCESORIOS
+SET DEFINE OFF;
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('2','1','Owen','1','Edward','1','Dodge','Tramadol HCl','1','Microondas');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('3','2','Cleo','2','Kyla','2','BMW','Nexium','2','Nevera');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('4','3','Chelsea','3','Ferdinand','3','Hyundai Motors','Lovaza','2','Nevera');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('5','4','Paloma','4','Isabelle','4','Subaru','Diazepam','4','Licores');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('6','5','Yoshio','5','Lacy','5','Mahindra and Mahindra','Simvastatin','5','Silla 1A');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('7','6','Austin','6','Ifeoma','6','Dongfeng Motor','Simvastatin','6','Silla 1B');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('8','7','Nora','7','Hammett','7','Toyota','Gabapentin','7','Equipo de sonido');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('9','8','Michelle','8','Reed','8','Buick','Hydrocodone/APAP','1','Microondas');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('10','9','August','9','Keiko','9','Lexus','Promethazine HCl','2','Nevera');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('11','10','Craig','10','Kaseem','10','Porsche','Fluticasone Propionate','3','Estufa');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('12','11','Cameran','11','Giacomo','11','Chevrolet','Atenolol','4','Licores');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('13','12','Tara','12','Price','12','JLR','Metformin HCl','5','Silla 1A');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('14','13','Linda','13','Brent','13','Citroën','Diazepam','6','Silla 1B');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('15','14','Basia','14','Chiquita','14','FAW','Actos','7','Equipo de sonido');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('16','15','Pascale','15','Yuri','15','Dongfeng Motor','Diovan','7','Equipo de sonido');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('17','16','Lara','16','Chandler','16','Acura','Synthroid','6','Silla 1B');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('18','17','Alexa','17','Rana','17','BMW','Clonazepam','5','Silla 1A');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('19','18','Susan','18','Alisa','18','Skoda','Proair HFA','4','Licores');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('20','19','Hammett','19','Duncan','19','Honda','Pravastatin Sodium','3','Estufa');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('21','20','Debra','20','Shea','20','Suzuki','Tramadol HCl','2','Nevera');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('22','1','Owen','21','Hammett','21','Suzuki','Furosemide','1','Microondas');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('23','2','Cleo','22','Salvador','22','JLR','Amoxicillin Trihydrate/Potassium Clavulanate','1','Microondas');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('24','3','Chelsea','23','Martena','23','Jeep','Carvedilol','2','Nevera');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('25','4','Paloma','24','Kennedy','24','Daimler','Alendronate Sodium','3','Estufa');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('26','5','Yoshio','25','Illiana','25','Fiat','Advair Diskus','4','Licores');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('27','6','Austin','26','Declan','26','Volvo','Lovastatin','5','Silla 1A');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('28','7','Nora','27','Ann','27','Porsche','Singulair','6','Silla 1B');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('29','8','Michelle','28','Jordan','28','Chrysler','Levaquin','7','Equipo de sonido');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('30','9','August','29','Blake','29','MINI','Cialis','7','Equipo de sonido');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('31','10','Craig','30','Ferris','30','Daihatsu','Prednisone','6','Silla 1B');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('32','11','Cameran','31','Kieran','31','RAM Trucks','Prednisone','5','Silla 1A');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('33','12','Tara','32','Lenore','32','Mazda','Simvastatin','4','Licores');
+Insert into DBAUSER.ACCESORIOS (ID_FACTURA,ID_VENDEDOR,NOMBRE,ID_CLIENTE,"Nombre cliente",ID_VEHICULO,MARCA,FABRICANTE,ID_OPCIONES,DESCRIPCION) values ('34','13','Linda','33','Trevor','33','Audi','Oxycontin','3','Estufa');
+REM INSERTING into DBAUSER.ORDERTODISPLAY
+SET DEFINE OFF;
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('3','Honda','10003','Pravastatin Sodium');
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('3','Audi','10003','Oxycontin');
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('3','Porsche','10003','Fluticasone Propionate');
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('3','Daimler','10003','Alendronate Sodium');
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('6','Porsche','10006','Singulair');
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('6','Acura','10006','Synthroid');
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('6','Citroën','10006','Diazepam');
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('6','Dongfeng Motor','10006','Simvastatin');
+Insert into DBAUSER.ORDERTODISPLAY (ID_OPCIONES,MARCA,CODIGO_OPCION,FABRICANTE) values ('6','Daihatsu','10006','Prednisone');
+--------------------------------------------------------
+--  DDL for Index SYS_C007111
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007111" ON "DBAUSER"."TIPO_DE_DOCUMENTOS" ("ID_TIPO_DE_DOCUMENTO") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007113
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007113" ON "DBAUSER"."TIPO_DE_VEHICULOS" ("ID_TIPO_VEHICULO") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007118
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007118" ON "DBAUSER"."PROVEEDORES" ("ID_PROVEEDOR") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007121
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007121" ON "DBAUSER"."OPCIONES" ("ID_OPCIONES") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007123
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007123" ON "DBAUSER"."IMPUESTOS" ("ID_IMPUESTO") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007124
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007124" ON "DBAUSER"."VENDEDORES" ("ID_VENDEDOR") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007128
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007128" ON "DBAUSER"."CLIENTES" ("ID_CLIENTE") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007136
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007136" ON "DBAUSER"."VEHICULOS" ("ID_VEHICULO") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007137
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007137" ON "DBAUSER"."HISTORIAL_VEHICULOS" ("ID_HISTORIAL_VEHICULOS") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007141
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007141" ON "DBAUSER"."FACTURAS" ("ID_FACTURA") 
+  ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007142
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "DBAUSER"."SYS_C007142" ON "DBAUSER"."FACTURA_DETALLE" ("ID_FACTURA_DETALLE") 
+  ;
 --------------------------------------------------------
 --  DDL for Trigger DECREASESTHENUMBEROFUNITS
 --------------------------------------------------------
@@ -442,35 +552,53 @@ set define off;
 
   CREATE OR REPLACE PROCEDURE "DBAUSER"."REORDER_UNITS" as
 begin
-    select op.unidades_disponibles --(op.unidades_disponibles+20) as unidadesdisponibles  
+    select (op.unidades_disponibles) as unidadesdisponibles  
     from  OrderToDisplay od 
     inner join opciones op on od.id_opciones = op.id_opciones;
 end;
 
 /
+
 --------------------------------------------------------
---  DDL for Function CALCULO_BINARIO
+--  Constraints for Table CLIENTES
 --------------------------------------------------------
 
+  ALTER TABLE "DBAUSER"."CLIENTES" ADD PRIMARY KEY ("ID_CLIENTE") ENABLE;
+  ALTER TABLE "DBAUSER"."CLIENTES" MODIFY ("TELEFONO" NOT NULL ENABLE);
+  ALTER TABLE "DBAUSER"."CLIENTES" MODIFY ("DIRECCION" NOT NULL ENABLE);
+  ALTER TABLE "DBAUSER"."CLIENTES" MODIFY ("NOMBRE" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table FACTURA_DETALLE
 --------------------------------------------------------
 
   ALTER TABLE "DBAUSER"."FACTURA_DETALLE" ADD PRIMARY KEY ("ID_FACTURA_DETALLE") ENABLE;
 --------------------------------------------------------
+--  Constraints for Table FACTURAS
+--------------------------------------------------------
+
+  ALTER TABLE "DBAUSER"."FACTURAS" ADD PRIMARY KEY ("ID_FACTURA") ENABLE;
+  ALTER TABLE "DBAUSER"."FACTURAS" MODIFY ("FIRMA_CLIENTE" NOT NULL ENABLE);
+  ALTER TABLE "DBAUSER"."FACTURAS" MODIFY ("PRECIO_FINAL" NOT NULL ENABLE);
+  ALTER TABLE "DBAUSER"."FACTURAS" MODIFY ("PRECIO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table HISTORIAL_VEHICULOS
+--------------------------------------------------------
+
+  ALTER TABLE "DBAUSER"."HISTORIAL_VEHICULOS" ADD CONSTRAINT "CK_ESTADO" CHECK (estado in ('NEW', 'TRADE', 'SOLD')) ENABLE;
+  ALTER TABLE "DBAUSER"."HISTORIAL_VEHICULOS" ADD PRIMARY KEY ("ID_HISTORIAL_VEHICULOS") ENABLE;
+--------------------------------------------------------
+--  Constraints for Table IMPUESTOS
+--------------------------------------------------------
+
+  ALTER TABLE "DBAUSER"."IMPUESTOS" ADD PRIMARY KEY ("ID_IMPUESTO") ENABLE;
+  ALTER TABLE "DBAUSER"."IMPUESTOS" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
+--------------------------------------------------------
 --  Constraints for Table OPCIONES
 --------------------------------------------------------
 
-  ALTER TABLE "DBAUSER"."OPCIONES" ADD CONSTRAINT "CK_OPCIONESS" CHECK (unidades_disponibles = '30') ENABLE;
   ALTER TABLE "DBAUSER"."OPCIONES" ADD PRIMARY KEY ("ID_OPCIONES") ENABLE;
   ALTER TABLE "DBAUSER"."OPCIONES" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
   ALTER TABLE "DBAUSER"."OPCIONES" MODIFY ("CODIGO_OPCION" NOT NULL ENABLE);
---------------------------------------------------------
---  Constraints for Table TIPO_DE_DOCUMENTOS
---------------------------------------------------------
-
-  ALTER TABLE "DBAUSER"."TIPO_DE_DOCUMENTOS" ADD PRIMARY KEY ("ID_TIPO_DE_DOCUMENTO") ENABLE;
-  ALTER TABLE "DBAUSER"."TIPO_DE_DOCUMENTOS" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table PROVEEDORES
 --------------------------------------------------------
@@ -481,13 +609,17 @@ end;
   ALTER TABLE "DBAUSER"."PROVEEDORES" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
   ALTER TABLE "DBAUSER"."PROVEEDORES" MODIFY ("CODIGO_PROVEEDOR" NOT NULL ENABLE);
 --------------------------------------------------------
---  Constraints for Table FACTURAS
+--  Constraints for Table TIPO_DE_DOCUMENTOS
 --------------------------------------------------------
 
-  ALTER TABLE "DBAUSER"."FACTURAS" ADD PRIMARY KEY ("ID_FACTURA") ENABLE;
-  ALTER TABLE "DBAUSER"."FACTURAS" MODIFY ("FIRMA_CLIENTE" NOT NULL ENABLE);
-  ALTER TABLE "DBAUSER"."FACTURAS" MODIFY ("PRECIO_FINAL" NOT NULL ENABLE);
-  ALTER TABLE "DBAUSER"."FACTURAS" MODIFY ("PRECIO" NOT NULL ENABLE);
+  ALTER TABLE "DBAUSER"."TIPO_DE_DOCUMENTOS" ADD PRIMARY KEY ("ID_TIPO_DE_DOCUMENTO") ENABLE;
+  ALTER TABLE "DBAUSER"."TIPO_DE_DOCUMENTOS" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TIPO_DE_VEHICULOS
+--------------------------------------------------------
+
+  ALTER TABLE "DBAUSER"."TIPO_DE_VEHICULOS" ADD PRIMARY KEY ("ID_TIPO_VEHICULO") ENABLE;
+  ALTER TABLE "DBAUSER"."TIPO_DE_VEHICULOS" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table VEHICULOS
 --------------------------------------------------------
@@ -501,36 +633,10 @@ end;
   ALTER TABLE "DBAUSER"."VEHICULOS" MODIFY ("PLACA" NOT NULL ENABLE);
   ALTER TABLE "DBAUSER"."VEHICULOS" MODIFY ("ID_VEHICULO" NOT NULL ENABLE);
 --------------------------------------------------------
---  Constraints for Table TIPO_DE_VEHICULOS
---------------------------------------------------------
-
-  ALTER TABLE "DBAUSER"."TIPO_DE_VEHICULOS" ADD PRIMARY KEY ("ID_TIPO_VEHICULO") ENABLE;
-  ALTER TABLE "DBAUSER"."TIPO_DE_VEHICULOS" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
---------------------------------------------------------
---  Constraints for Table CLIENTES
---------------------------------------------------------
-
-  ALTER TABLE "DBAUSER"."CLIENTES" ADD PRIMARY KEY ("ID_CLIENTE") ENABLE;
-  ALTER TABLE "DBAUSER"."CLIENTES" MODIFY ("TELEFONO" NOT NULL ENABLE);
-  ALTER TABLE "DBAUSER"."CLIENTES" MODIFY ("DIRECCION" NOT NULL ENABLE);
-  ALTER TABLE "DBAUSER"."CLIENTES" MODIFY ("NOMBRE" NOT NULL ENABLE);
---------------------------------------------------------
---  Constraints for Table IMPUESTOS
---------------------------------------------------------
-
-  ALTER TABLE "DBAUSER"."IMPUESTOS" ADD PRIMARY KEY ("ID_IMPUESTO") ENABLE;
-  ALTER TABLE "DBAUSER"."IMPUESTOS" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
---------------------------------------------------------
 --  Constraints for Table VENDEDORES
 --------------------------------------------------------
 
   ALTER TABLE "DBAUSER"."VENDEDORES" ADD PRIMARY KEY ("ID_VENDEDOR") ENABLE;
---------------------------------------------------------
---  Constraints for Table HISTORIAL_VEHICULOS
---------------------------------------------------------
-
-  ALTER TABLE "DBAUSER"."HISTORIAL_VEHICULOS" ADD CONSTRAINT "CK_ESTADO" CHECK (estado in ('NEW', 'TRADE', 'SOLD')) ENABLE;
-  ALTER TABLE "DBAUSER"."HISTORIAL_VEHICULOS" ADD PRIMARY KEY ("ID_HISTORIAL_VEHICULOS") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table CLIENTES
 --------------------------------------------------------
