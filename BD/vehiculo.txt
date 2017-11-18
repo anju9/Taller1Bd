@@ -1,0 +1,116 @@
+DROP TABLE `Vehiculo`;
+
+CREATE TABLE `Vehiculo` (
+  `id` number primary key,
+  `id_vehiculo` number default NULL,
+  `placa` varchar2(255),
+  `nombre` varchar2(255) default NULL,
+  `modelo` varchar2(255) default NULL,
+  `ano` varchar2(255),
+  `fabricante` varchar2(255) default NULL,
+  `costo_cantidad` varchar2(100) default NULL,
+  `opcion_id` number default NULL,
+  `tipo_vehiculo_id` number default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (1,'G5N 8I3','Vauxhall','47','03/21/2018','Zetia','$7,290',1,1);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (2,'A2Z 4B0','Ferrari','83','10/23/2016','Hydrocodone/APAP','$9,554',2,2);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (3,'J1S 6D0','Mitsubishi Motors','97','09/06/2018','Endocet','$8,666',3,3);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (4,'A5F 7P4','Fiat','59','05/01/2017','','$8,514',4,4);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (5,'A2Y 1S7','Kenworth','43','04/16/2017','','$7,186',5,5);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (6,'E6A 8M6','Maruti Suzuki','79','01/17/2018','Lipitor','$9,852',6,6);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (7,'R3M 9C9','Skoda','67','02/09/2018','','$8,678',7,7);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (8,'D9T 3N7','Mahindra and Mahindra','2','01/25/2018','','$5,132',8,8);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (9,'Y0S 9V4','Hyundai Motors','11','07/19/2018','Lisinopril','$6,727',9,9);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (10,'B3H 5S8','Tata Motors','37','05/05/2018','Simvastatin','$6,389',10,10);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (11,'P0O 3V3','Skoda','83','04/02/2017','Flovent HFA','$5,176',11,11);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (12,'R2Y 2N4','Citroën','2','02/17/2018','Metformin HCl','$8,033',12,12);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (13,'J0F 3Q4','Mazda','41','05/08/2018','','$6,671',13,13);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (14,'J1S 1Y3','Volvo','89','06/15/2017','Lorazepam','$5,590',14,14);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (15,'M4I 3L3','GMC','2','07/11/2017','','$7,233',15,15);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (16,'V9Q 6S4','Tata Motors','47','08/10/2018','','$9,503',16,16);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (17,'C9G 3T9','Dacia','67','12/02/2016','','$5,715',17,17);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (18,'M3F 4D2','Smart','67','02/25/2017','','$7,299',18,18);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (19,'R5W 7E7','Isuzu','73','06/26/2017','Ibuprofen (Rx)','$6,441',19,19);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (20,'A1J 8N4','Kia Motors','53','04/29/2018','Plavix','$8,936',20,20);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (21,'C4F 1F2','Volkswagen','17','01/27/2017','Oxycodone/APAP','$6,593',21,21);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (22,'A0J 0J6','Jeep','61','03/23/2017','','$7,476',22,22);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (23,'M3F 7R1','Hyundai Motors','1','08/20/2017','Trazodone HCl','$9,094',23,23);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (24,'C1Y 9Q6','Volkswagen','53','07/11/2017','','$5,484',24,24);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (25,'C0E 1X1','Smart','29','04/10/2018','','$8,134',25,25);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (26,'Z1Y 6D1','Mazda','11','11/05/2016','Gabapentin','$9,482',26,26);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (27,'S0N 9Y9','General Motors','67','01/04/2018','','$5,365',27,27);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (28,'T9I 5K6','Vauxhall','19','02/11/2017','Cephalexin','$6,965',28,28);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (29,'N0G 9W0','Suzuki','23','01/20/2017','Vitamin D (Rx)','$9,375',29,29);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (30,'J5E 3Y3','Porsche','83','08/20/2018','','$5,073',30,30);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (31,'W5N 5F9','Acura','19','01/13/2017','Levaquin','$7,871',31,31);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (32,'C2F 2N4','Fiat','5','02/20/2018','','$5,488',32,32);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (33,'J0B 7H6','Mazda','67','10/22/2016','Klor-Con M20','$9,354',33,33);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (34,'O9Z 2N2','MINI','83','07/12/2017','Diovan HCT','$7,055',34,34);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (35,'L2F 8Q2','Isuzu','5','07/03/2018','Pantoprazole Sodium','$6,456',35,35);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (36,'F0N 8G2','Porsche','97','11/01/2016','','$6,599',36,36);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (37,'J4Z 5T2','Kenworth','53','05/13/2018','Diovan','$8,071',37,37);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (38,'R4W 0Z0','Mazda','7','04/16/2018','Symbicort','$9,937',38,38);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (39,'X2O 0W7','Skoda','29','10/31/2016','','$7,934',39,39);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (40,'Q0C 5S2','Citroën','47','12/05/2016','Cephalexin','$9,900',40,40);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (41,'V7T 7L0','Dacia','41','09/29/2017','','$8,527',41,41);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (42,'L7N 2X0','Audi','19','11/11/2017','','$6,335',42,42);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (43,'B8L 8O5','Maruti Suzuki','61','11/10/2016','Abilify','$5,079',43,43);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (44,'U3C 9P3','Acura','59','11/22/2016','Lisinopril','$9,114',44,44);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (45,'G6U 4J3','Volkswagen','67','06/11/2017','Hydrochlorothiazide','$9,571',45,45);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (46,'S5C 0B8','RAM Trucks','79','03/21/2017','','$8,255',46,46);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (47,'G2M 7F6','GMC','67','11/16/2016','','$8,978',47,47);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (48,'A6V 7K3','Mitsubishi Motors','1','11/02/2017','Promethazine HCl','$7,075',48,48);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (49,'C2J 0I9','Volkswagen','11','02/11/2017','Glyburide','$9,165',49,49);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (50,'W9P 0F8','Mazda','29','11/15/2016','Carvedilol','$5,612',50,50);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (51,'N6M 1H3','Dacia','17','08/16/2017','','$5,622',51,51);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (52,'F2E 3S2','Tata Motors','71','08/07/2018','Diovan','$6,231',52,52);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (53,'O3A 4T6','Honda','97','01/14/2017','','$8,975',53,53);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (54,'L7Y 7N3','RAM Trucks','11','07/08/2018','','$6,458',54,54);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (55,'W5J 9O1','Daimler','67','03/05/2018','','$8,477',55,55);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (56,'L4Z 4U6','Ford','89','06/08/2018','Alprazolam','$9,376',56,56);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (57,'W0B 5A0','Porsche','61','02/14/2017','','$7,294',57,57);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (58,'V1E 9X7','Toyota','71','11/16/2016','Cyclobenzaprin HCl','$7,387',58,58);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (59,'S6E 3N6','Cadillac','17','10/24/2017','','$7,877',59,59);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (60,'E5N 4F8','Subaru','97','02/20/2018','','$6,545',60,60);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (61,'E2T 8O7','MINI','19','07/19/2018','','$5,704',61,61);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (62,'V3X 5I3','Renault','97','08/05/2018','','$7,755',62,62);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (63,'E1Y 3H3','Maruti Suzuki','67','12/24/2017','Omeprazole (Rx)','$6,369',63,63);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (64,'A5R 2U3','Volkswagen','31','03/03/2017','Cymbalta','$8,719',64,64);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (65,'D5Y 1M3','Peugeot','7','09/01/2018','','$9,764',65,65);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (66,'Z2V 3N4','Infiniti','97','03/31/2017','Citalopram HBr','$5,150',66,66);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (67,'I9C 5T6','Ford','11','07/21/2017','','$5,563',67,67);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (68,'X4Z 6O4','Infiniti','61','12/03/2017','Metformin HCl','$9,035',68,68);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (69,'U6I 8A9','Mitsubishi Motors','23','11/21/2017','Glipizide','$7,817',69,69);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (70,'K9G 8G1','Lexus','43','09/12/2017','Furosemide','$6,884',70,70);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (71,'C6J 5H0','Dongfeng Motor','31','12/30/2016','Vitamin D (Rx)','$6,100',71,71);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (72,'Y2T 0L7','JLR','79','02/23/2017','','$5,056',72,72);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (73,'L2J 7H9','Fiat','89','10/20/2017','','$6,586',73,73);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (74,'K4K 8P3','BMW','5','07/23/2018','','$7,309',74,74);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (75,'S5V 8D6','Audi','2','02/26/2017','','$9,297',75,75);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (76,'X5S 8S5','Vauxhall','19','02/27/2018','','$7,596',76,76);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (77,'R8C 4W5','Mitsubishi Motors','17','08/25/2017','','$5,504',77,77);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (78,'D8N 5P4','Seat','89','04/09/2017','','$6,220',78,78);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (79,'L8L 3P7','Renault','19','09/04/2017','Tamsulosin HCl','$9,978',79,79);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (80,'F0K 7A5','Dodge','47','10/12/2016','','$9,791',80,80);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (81,'E4U 9A1','Chevrolet','79','03/21/2018','','$5,942',81,81);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (82,'O8A 6T0','Vauxhall','67','11/27/2016','Carvedilol','$8,015',82,82);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (83,'Y0B 0T5','MINI','47','12/14/2016','Lisinopril','$7,091',83,83);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (84,'T5B 1J8','Skoda','5','11/01/2017','','$5,031',84,84);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (85,'A0Y 4C6','Toyota','37','07/27/2017','','$6,881',85,85);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (86,'H1X 7N4','Kenworth','53','06/12/2018','Lantus Solostar','$8,389',86,86);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (87,'Y5Q 8D7','FAW','79','07/23/2018','','$8,243',87,87);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (88,'I0D 1D0','Mitsubishi Motors','79','07/27/2017','Losartan Potassium','$8,781',88,88);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (89,'H6H 4U8','Hyundai Motors','47','11/25/2017','Lisinopril','$7,575',89,89);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (90,'C3K 2F5','Toyota','5','04/25/2017','Zetia','$7,953',90,90);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (91,'B6Q 6U5','Fiat','2','03/08/2018','','$6,876',91,91);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (92,'V7B 9Z1','Volkswagen','73','01/30/2018','Triamcinolone Acetonide','$8,882',92,92);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (93,'O2X 8J1','Jeep','23','09/19/2017','','$7,573',93,93);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (94,'D3R 1D9','Jeep','31','02/23/2018','Sertraline HCl','$9,187',94,94);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (95,'Z1V 2R3','Honda','19','07/04/2017','Metformin HCl','$10,000',95,95);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (96,'A9S 4D8','Fiat','89','11/19/2017','Gabapentin','$6,313',96,96);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (97,'J8N 7N3','Buick','19','02/04/2017','','$7,029',97,97);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (98,'N9E 4S2','BMW','23','05/21/2018','Diovan','$7,025',98,98);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (99,'S4N 4V2','Ford','61','06/25/2017','','$7,029',99,99);
+INSERT INTO `Vehiculo` (`id_vehiculo`,`placa`,`nombre`,`modelo`,`ano`,`fabricante`,`costo_cantidad`,`opcion_id`,`tipo_vehiculo_id`) VALUES (100,'U5O 8W5','RAM Trucks','29','10/03/2018','','$6,664',100,100);

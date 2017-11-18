@@ -1,0 +1,189 @@
+VIDEO DE FUNCIONES 
+
+PARTE 1 FUNCIONES UTILES
+
+declare --procedimiento anonimo
+numero integer := 50;
+flotante number(5,2) :=33.64;
+text varchar2(255) := 'Nayibe Andrea Jaramillo Camino';
+begin
+    dbms_output.put_line(numero);
+    dbms_output.put_line(flotante);
+    dbms_output.put_line(text);
+    
+    
+    dbms_output.put_line('numero a texto: ' || TO_CHAR(numero));
+    dbms_output.put_line('Redondear or encima: ' || CEIL(flotante));
+    dbms_output.put_line('Redondear por debajo: ' || FLOOR(flotante));
+    dbms_output.put_line('Mayor de los elementos: ' || GREATEST(4,5,6));
+    dbms_output.put_line('Potencia al cuadrado ' || POWER(numero,2));
+    dbms_output.put_line('Potencia al cubo: ' ||TO_CHAR(numero ** 3));
+    dbms_output.put_line('Residuo: ' || MOD(numero,3));
+    dbms_output.put_line('Raiz cuadrada: ' || SQRT(numero));
+    dbms_output.put_line('Longitud de string: ' || LENGTH(text));
+    
+end;
+
+-------------------------------------------------------------------------------
+PARTE 2 RECORRIDO DE UNA CADENA
+
+declare --procedimiento anonimo
+numero integer := 50;
+flotante number(5,2) :=33.64;
+text varchar2(255) := 'Nayibe Andrea Jaramillo Camino';
+texto_inverso varchar2(255);
+texto_inverso2 varchar2(255);
+begin
+    dbms_output.put_line(numero);
+    dbms_output.put_line(flotante);
+    dbms_output.put_line(text);
+    
+    
+    dbms_output.put_line('numero a texto: ' || TO_CHAR(numero));
+    dbms_output.put_line('Redondear or encima: ' || CEIL(flotante));
+    dbms_output.put_line('Redondear por debajo: ' || FLOOR(flotante));
+    dbms_output.put_line('Mayor de los elementos: ' || GREATEST(4,5,6));
+    dbms_output.put_line('Potencia al cuadrado ' || POWER(numero,2));
+    dbms_output.put_line('Potencia al cubo: ' ||TO_CHAR(numero ** 3));
+    dbms_output.put_line('Residuo: ' || MOD(numero,3));
+    dbms_output.put_line('Raiz cuadrada: ' || SQRT(numero));
+    dbms_output.put_line('Longitud de string: ' || LENGTH(text));
+    
+    FOR i IN REVERSE 1..length(text) LOOP
+    texto_inverso := CONCAT(texto_inverso, SUBSTR(text, i , 1));
+    END LOOP;
+           
+    FOR i IN REVERSE 1..length(text) LOOP
+    texto_inverso2 := CONCAT(texto_inverso, SUBSTR(text, -i , 1));
+    END LOOP;
+    
+    dbms_output.put_line('Texto_Inverso: ' || texto_inverso);
+    dbms_output.put_line('Texto_Inverso2: ' || texto_inverso2);
+    
+end;
+-----------------------------------------------------------------
+PARTE 3 ARREGLOS RECORRIDO DE UN VECTOR
+
+DECLARE
+ TYPE varray_type IS VARRAY(5) OF INTEGER;
+ v2 varray_type;
+ BEGIN
+   v2 := varray_type(1,2,3,4,5);
+   FOR i in 1..v2.count LOOP
+    dbms_output.put_line(v2(i));
+  END LOOP;
+ END;
+-------------------------------------------------------------------
+PARTE 3 INGRESAR UN VECTOR DENTRO DE UNA FUNCIÓN
+
+CREATE TYPE varray_type IS VARRAY(5) OF INTEGER; 
+DECLARE  
+ v2 varray_type;  
+ BEGIN
+   v2 := varray_type(1,2,3,4,5);
+   impresion_arreglo(v2);
+ END;
+
+ CREATE OR REPLACE PROCEDURE impresion_arreglo(arreglo VARRAY_TYPE)IS
+ BEGIN
+ FOR i in 1..arreglo.count LOOP
+    dbms_output.put_line(arreglo(i));
+  END LOOP;
+ END;
+ 
+ 
+---------------------------------------------------------------------
+PARTE 4 CUANTAS VECES ENCONTRO UN CARACTER DENTRO DE UN TEXTO
+ -- INSTR DEVUELVE LA UBICACION EN LA CUAL SE ENCUENTRA UN SUBSTRING EN UNS STRING.
+
+DECLARE 
+   texto VARCHAR2(255) := 'Nayibe Andrea Jaramillo Camino';
+BEGIN
+    dbms_output.put_line('La letra e se encontró: '|| numero_caracteres_encontrados(texto,'e')|| 'veces');
+END;
+
+CREATE OR REPLACE FUNCTION numero_caracteres_encontrados(texto varchar2, caracter varchar2) RETURN INTEGER IS
+ i integer :=1;
+ contador integer := 0;
+ posicion integer := 0;
+BEGIN
+   WHILE (i <= length(texto)) LOOP
+   posicion := INSTR(texto, caracter, i);
+   IF posicion = 0 THEN 
+      i := length(texto) + 1;
+      ELSE 
+      i:= posicion +1;
+      contador := contador + 1;
+      END IF;
+   END LOOP;
+   RETURN contador;
+END;
+
+-------------------------------------------------------------------------------------------------------------------------------------
+TALLER
+
+create or replace function funcionname(part1 in varchar2,par2 out number)
+return  varchar2 is
+begin
+    par2:=1000;
+   return ('hola: ' || part1);
+end;
+
+declare
+como_sea number:=10;
+begin
+  for i in 1..como_sea loop
+  dbms_output.put_line('el valor de la i es : ' || to_char(i));
+  end loop;
+ -- dbms_output.put_line('valor inicial como_sea:' || como_sea);
+  --dbms_output.put_line(funcionname('juanpablo',como_sea));
+  --dbms_output.put_line('valor final como sea: ' ||como_sea);
+end;
+
+
+--1. CREATE a program that will ask the USER FOR a NUMBER AND THEN print OUT a list OF NUMBER FROM 1 
+--TO the NUMBER entered AND the square OF the NUMBER. FOR example, IF the USER entered '3' 
+--THEN the program would output: (1 squared IS 1. / 2 squared IS 4. / 3 squared IS 9.)
+
+declare
+como_sea number:=10;
+begin
+  for i in 1..como_sea loop
+  dbms_output.put_line('el valor '|| i || ' es : ' || power(i,2));
+  end loop;
+ -- dbms_output.put_line('valor inicial como_sea:' || como_sea);
+  --dbms_output.put_line(funcionname('juanpablo',como_sea));
+  --dbms_output.put_line('valor final como sea: ' ||como_sea);
+end;
+
+--2. CREATE a program which will produce the times TABLE FOR an NUMBER entered BY the USER.
+declare
+como_sea number:=3;
+begin
+  for i in 1..10 loop
+  dbms_output.put_line( como_sea || ' x  ' || i || '=' || i*como_sea);
+  end loop;
+ -- dbms_output.put_line('valor inicial como_sea:' || como_sea);
+  --dbms_output.put_line(funcionname('juanpablo',como_sea));
+  --dbms_output.put_line('valor final como sea: ' ||como_sea);
+end;
+
+--4. FUNCTION TO calculate hypotenuse given two cathetus
+
+create or replace function hipotenusa(a in number, b in number )
+return  number is
+begin
+    cateto1:=5;
+    cateto2:=3;
+    hipotenusa:=sqrt(power(cateto1,2)+(power(cateto2,2)));
+
+    return hipotenusa;
+end;
+
+
+
+
+
+
+
+

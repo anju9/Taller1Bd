@@ -1,0 +1,113 @@
+
+DROP TABLE `Cliente`;
+
+CREATE TABLE `Cliente` (
+  `id` number primary key,
+  `id_cliente` number default NULL,
+  `tipo_de_documento_id` varchar2(15) default NULL,
+  `nombre` varchar2(255) default NULL,
+  `dirreccion` varchar2(255) default NULL,
+  `telefono` varchar2(100) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (1,'22458189','Edward','173-3038 Cursus, Avenue','047-529-8891');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (2,'32760174','Kyla','P.O. Box 707, 5821 Condimentum Ave','084-235-1611');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (3,'41314060','Ferdinand','1611 Pellentesque Street','096-226-2393');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (4,'12704637','Isabelle','516-8202 Duis Av.','036-702-4269');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (5,'47363007','Lacy','9911 Odio. Street','023-195-9856');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (6,'18350824','Ifeoma','Ap #993-4711 Ultrices. Rd.','014-826-3667');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (7,'50662593','Hammett','3258 Nec, Rd.','063-218-6915');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (8,'45058878','Reed','4837 Eros. Rd.','034-539-1091');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (9,'26097059','Keiko','Ap #843-7488 Auctor. Avenue','075-249-1301');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (10,'18606551','Kaseem','P.O. Box 738, 4453 Pharetra Avenue','075-488-6637');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (11,'40004333','Giacomo','149-1950 Nec Ave','082-338-2519');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (12,'20482014','Price','434-6889 Arcu Rd.','057-956-1675');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (13,'44018375','Brent','Ap #471-8369 Conubia Rd.','028-247-9105');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (14,'16389926','Chiquita','2590 Eget Rd.','036-633-2222');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (15,'42959397','Yuri','6009 Laoreet Road','086-878-8758');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (16,'31950498','Chandler','112-5027 Tortor Ave','062-085-2155');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (17,'34429625','Rana','145-4118 Nibh Rd.','067-393-7599');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (18,'21832639','Alisa','Ap #871-7427 Tellus. St.','082-132-2971');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (19,'48265657','Duncan','Ap #625-1731 Adipiscing. Avenue','007-428-5743');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (20,'13459719','Shea','3665 Sollicitudin Road','070-221-9630');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (21,'5143787','Hammett','9308 Malesuada Av.','072-756-8747');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (22,'38714604','Salvador','Ap #944-5999 Sed Av.','061-987-6420');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (23,'20103874','Martena','Ap #143-4525 Nulla Street','055-930-7759');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (24,'35894624','Kennedy','8902 In Street','052-222-1599');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (25,'39922827','Illiana','Ap #361-7559 A Road','003-554-1368');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (26,'35427188','Declan','989-3056 Lacinia Av.','074-385-8719');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (27,'16085858','Ann','594-8460 Dapibus Av.','015-137-5837');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (28,'45447118','Jordan','Ap #539-9088 Lacus. Av.','009-640-6291');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (29,'39307163','Blake','6011 Ultrices Street','080-413-3318');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (30,'34770350','Ferris','9584 Donec Av.','032-063-0597');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (31,'12461323','Kieran','9796 Posuere Av.','097-140-4121');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (32,'40008709','Lenore','566-6501 Libero. St.','098-889-5436');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (33,'17624871','Trevor','P.O. Box 383, 8109 Amet, Road','011-123-2330');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (34,'44972053','Alexis','7859 Phasellus St.','058-807-6373');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (35,'24582728','Yuli','Ap #740-2828 Tincidunt Street','026-121-6399');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (36,'46036383','Harrison','663-3900 Velit St.','086-389-7812');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (37,'41029510','Lael','Ap #909-1486 Eu Ave','080-267-0274');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (38,'32925345','Cailin','6166 Curabitur Street','037-865-1738');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (39,'50702037','Daniel','Ap #481-635 Sapien. St.','014-340-9303');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (40,'21601424','Blaze','636-7770 Libero. St.','031-907-4697');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (41,'47594981','Yasir','P.O. Box 855, 521 Netus Ave','048-043-4305');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (42,'10894686','Alma','8537 Sapien, Avenue','068-258-8601');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (43,'17001267','Helen','4680 Nibh. Av.','081-854-9322');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (44,'39248372','Caldwell','8894 Felis Ave','049-985-1043');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (45,'6427441','Azalia','7227 Ornare Avenue','092-418-1891');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (46,'42520441','Brynne','Ap #224-8498 Volutpat Rd.','083-426-6205');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (47,'16612862','Rebecca','Ap #469-8973 Tristique Street','096-294-4279');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (48,'44552411','Lucy','207-1131 Dignissim St.','049-985-2075');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (49,'46844933','Ivor','109-8012 Dapibus St.','032-083-5645');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (50,'22959776','Amir','965-8598 Non, Rd.','055-273-3127');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (51,'43098640','Akeem','Ap #699-1142 Nunc Street','019-066-2844');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (52,'29134790','Lucas','6313 Posuere, Av.','047-621-1102');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (53,'43729130','Whilemina','Ap #595-7058 Vivamus Road','061-650-8855');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (54,'30882154','Madison','464-6104 Nulla. Av.','099-697-2442');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (55,'45686049','Zia','755-5167 Cursus Avenue','097-313-5681');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (56,'8207501','Amery','P.O. Box 521, 7929 Et Avenue','083-265-7625');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (57,'30996263','Veronica','490-8010 Mauris. Road','087-456-8481');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (58,'37014646','Eric','919-4322 Dictum Av.','093-288-3697');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (59,'38658870','Dalton','1545 Vulputate Ave','061-989-1960');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (60,'24652596','Dara','8000 Feugiat Rd.','047-089-7731');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (61,'23702173','Tatum','8479 Mi Street','093-203-2553');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (62,'47762041','Linus','P.O. Box 215, 5676 Eget St.','049-562-3146');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (63,'39622224','Caldwell','6620 Nullam St.','082-133-9072');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (64,'37649384','Nasim','Ap #601-7745 Lacus. Street','013-220-1696');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (65,'31290014','Caesar','P.O. Box 316, 8071 Duis Rd.','076-916-6460');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (66,'40157487','Kaitlin','Ap #770-5776 Duis St.','098-361-2177');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (67,'45103493','Victor','Ap #676-4936 Augue St.','098-535-6754');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (68,'13330794','Arsenio','450-5512 Montes, Road','032-263-1866');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (69,'32874263','Emily','6034 Semper Road','085-430-2656');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (70,'32663182','Ronan','Ap #884-4986 Erat. St.','064-678-4063');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (71,'15439457','Steven','P.O. Box 555, 8300 Nec, Rd.','026-911-6279');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (72,'26684312','April','6070 Felis Road','031-724-0751');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (73,'44252268','Hillary','926-1416 Tincidunt Ave','010-529-1966');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (74,'15066282','May','Ap #755-2014 Vitae, Ave','037-503-7020');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (75,'38029955','Barclay','1130 Quis Av.','018-466-1383');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (76,'36011877','Germaine','7006 Eget St.','036-144-8529');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (77,'26812357','Honorato','P.O. Box 755, 753 Diam Street','030-850-4690');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (78,'19206654','Lunea','P.O. Box 105, 4860 Tempor Road','055-155-7417');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (79,'36585912','Avram','Ap #381-7657 Varius St.','036-287-2144');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (80,'28713770','Valentine','6540 Cursus Road','080-825-2422');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (81,'26606799','Zahir','643-7222 Leo. Street','069-342-3679');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (82,'48659796','Julian','P.O. Box 608, 8403 Posuere, St.','051-442-0727');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (83,'37708450','Keiko','473-7758 Urna. Road','099-630-2138');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (84,'5364378','Hunter','984-1074 Morbi Ave','088-504-6597');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (85,'19305323','Cadman','Ap #609-3904 Risus. Road','012-621-0545');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (86,'27066718','Anastasia','Ap #923-326 Id, Ave','010-967-2904');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (87,'39364868','Francesca','8092 Donec Av.','032-429-2423');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (88,'23201283','Nita','519-1739 Ante. Street','054-072-1747');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (89,'12699675','Raven','P.O. Box 132, 5857 Nisi. Road','079-931-4727');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (90,'7631945','Sylvester','320-9677 Aliquam Ave','085-688-5990');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (91,'15304845','Kylie','P.O. Box 356, 5690 Malesuada St.','057-189-3463');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (92,'45146807','Addison','P.O. Box 539, 356 Enim. Ave','073-267-3780');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (93,'22546708','Quinn','164-2546 A Street','020-824-7857');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (94,'11812051','Tobias','P.O. Box 461, 5790 Aliquet Avenue','095-651-6144');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (95,'13769508','Jena','2195 Nulla. Rd.','038-396-4322');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (96,'15041974','Veda','2621 Felis Road','035-469-0367');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (97,'7612714','Tanek','2054 Id, Av.','046-691-0523');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (98,'29720045','Brianna','P.O. Box 158, 1838 Vestibulum, Street','065-565-5756');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (99,'17483567','Imelda','5308 Dolor Rd.','034-141-4392');
+INSERT INTO `Cliente` (`id_cliente`,`tipo_de_documento_id`,`nombre`,`dirreccion`,`telefono`) VALUES (100,'11052502','Dara','5133 Scelerisque Rd.','036-749-5475');

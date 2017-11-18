@@ -1,0 +1,232 @@
+tipo de documento
+
+DROP TABLE `Tipo_de_Documentos`;
+
+CREATE TABLE `Tipo_de_Documentos` (
+  `id` number primary key,
+  `id_tipo_de_documento` number default NULL,
+  `descripcion` varchar2(15) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (1,'38667588');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (2,'45676733');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (3,'34340098');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (4,'47001001');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (5,'36379128');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (6,'32924201');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (7,'16498558');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (8,'43428198');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (9,'7608763');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (10,'28087630');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (11,'39749051');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (12,'6323182');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (13,'7717236');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (14,'38799647');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (15,'32763125');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (16,'37659180');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (17,'47664551');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (18,'48233631');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (19,'37925421');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (20,'13965394');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (21,'48422273');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (22,'7514693');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (23,'34949456');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (24,'35496604');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (25,'5218399');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (26,'14874877');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (27,'18889343');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (28,'50353198');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (29,'38936869');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (30,'30972705');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (31,'34290975');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (32,'50026843');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (33,'41718061');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (34,'35861828');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (35,'39133784');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (36,'39922982');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (37,'33264273');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (38,'14764352');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (39,'12579483');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (40,'32855787');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (41,'41632322');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (42,'12423247');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (43,'47882269');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (44,'43785707');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (45,'29233077');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (46,'12111414');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (47,'13187019');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (48,'19789326');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (49,'23681814');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (50,'47116781');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (51,'32970277');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (52,'40484365');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (53,'38869687');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (54,'34382198');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (55,'14882419');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (56,'16285033');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (57,'9750900');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (58,'17515810');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (59,'26790603');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (60,'20100333');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (61,'21374549');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (62,'39000040');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (63,'25650500');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (64,'22611613');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (65,'46986462');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (66,'49165621');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (67,'41805189');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (68,'13845799');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (69,'20332051');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (70,'44302275');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (71,'7437313');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (72,'43949238');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (73,'26203085');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (74,'38168678');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (75,'30816024');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (76,'43499205');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (77,'36716706');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (78,'26580551');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (79,'17395684');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (80,'23488415');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (81,'28939541');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (82,'5167852');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (83,'28073496');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (84,'17817810');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (85,'25623806');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (86,'23120604');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (87,'14142618');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (88,'7823477');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (89,'28107855');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (90,'13799414');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (91,'37465337');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (92,'6832113');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (93,'25634643');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (94,'28678637');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (95,'39489126');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (96,'21671164');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (97,'30961906');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (98,'14320283');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (99,'19627673');
+INSERT INTO `Tipo_de_Documentos` (`id_tipo_de_documento`,`descripcion`) VALUES (100,'39957015');
+
+*********************************************************************************************************************************************************************
+
+VENDEDORES
+
+DROP TABLE `Vendedores`;
+
+CREATE TABLE `Vendedores` (
+  `id` number primary key,
+  `id_vendedor` number default NULL,
+  `tipo_de_documento_id` number default NULL,
+  `nombre` varchar2(255) default NULL,
+  `estado_vendedor_id` number default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (1,1,'Owen',1);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (2,2,'Cleo',2);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (3,3,'Chelsea',3);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (4,4,'Paloma',4);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (5,5,'Yoshio',5);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (6,6,'Austin',6);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (7,7,'Nora',7);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (8,8,'Michelle',8);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (9,9,'August',9);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (10,10,'Craig',10);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (11,11,'Cameran',11);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (12,12,'Tara',12);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (13,13,'Linda',13);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (14,14,'Basia',14);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (15,15,'Pascale',15);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (16,16,'Lara',16);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (17,17,'Alexa',17);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (18,18,'Susan',18);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (19,19,'Hammett',19);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (20,20,'Debra',20);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (21,21,'Giacomo',21);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (22,22,'Fuller',22);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (23,23,'Aubrey',23);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (24,24,'Erasmus',24);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (25,25,'Alana',25);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (26,26,'Ella',26);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (27,27,'Mariam',27);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (28,28,'Denton',28);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (29,29,'Ulysses',29);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (30,30,'Madeline',30);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (31,31,'Carla',31);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (32,32,'Oprah',32);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (33,33,'Alexander',33);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (34,34,'Phyllis',34);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (35,35,'Savannah',35);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (36,36,'Lydia',36);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (37,37,'Hayfa',37);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (38,38,'Ulric',38);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (39,39,'Macy',39);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (40,40,'Destiny',40);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (41,41,'Shaeleigh',41);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (42,42,'Gil',42);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (43,43,'Fitzgerald',43);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (44,44,'Hedda',44);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (45,45,'Aiko',45);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (46,46,'Kylee',46);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (47,47,'Uriah',47);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (48,48,'Ira',48);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (49,49,'Montana',49);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (50,50,'Naida',50);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (51,51,'Ifeoma',51);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (52,52,'Blair',52);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (53,53,'Chiquita',53);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (54,54,'Jarrod',54);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (55,55,'Hilary',55);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (56,56,'Erica',56);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (57,57,'Jayme',57);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (58,58,'Rudyard',58);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (59,59,'Reagan',59);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (60,60,'Leah',60);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (61,61,'Sonya',61);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (62,62,'Desiree',62);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (63,63,'Justin',63);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (64,64,'Emery',64);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (65,65,'Dakota',65);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (66,66,'Allegra',66);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (67,67,'Ebony',67);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (68,68,'Breanna',68);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (69,69,'Troy',69);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (70,70,'Yasir',70);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (71,71,'Nicole',71);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (72,72,'Serena',72);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (73,73,'Leilani',73);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (74,74,'Silas',74);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (75,75,'Orlando',75);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (76,76,'Yoshio',76);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (77,77,'Uriel',77);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (78,78,'Adam',78);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (79,79,'Winter',79);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (80,80,'Donna',80);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (81,81,'Graiden',81);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (82,82,'Daquan',82);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (83,83,'Roanna',83);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (84,84,'Carter',84);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (85,85,'Cedric',85);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (86,86,'Zachery',86);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (87,87,'Rama',87);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (88,88,'Dorian',88);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (89,89,'Zephr',89);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (90,90,'Athena',90);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (91,91,'Alma',91);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (92,92,'Jana',92);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (93,93,'Ebony',93);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (94,94,'Victor',94);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (95,95,'Hashim',95);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (96,96,'Colby',96);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (97,97,'Quin',97);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (98,98,'Addison',98);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (99,99,'Marcia',99);
+INSERT INTO `Vendedores` (`id_vendedor`,`tipo_de_documento_id`,`nombre`,`estado_vendedor_id`) VALUES (100,100,'Burke',100);
+
+**********************************************************************************************************************************************************************
+
+
+
