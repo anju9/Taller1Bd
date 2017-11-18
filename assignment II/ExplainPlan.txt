@@ -1,0 +1,27 @@
+Plan hash value: 147472413
+ 
+-----------------------------------------------------------------------------------------------
+| Id  | Operation                       | Name        | Rows  | Bytes | Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT                |             |    34 |  2482 |    17  (18)| 00:00:01 |
+|*  1 |  HASH JOIN                      |             |    34 |  2482 |    17  (18)| 00:00:01 |
+|*  2 |   HASH JOIN                     |             |    34 |  2142 |    13  (16)| 00:00:01 |
+|*  3 |    HASH JOIN                    |             |    34 |  1802 |    10  (20)| 00:00:01 |
+|   4 |     MERGE JOIN                  |             |    35 |  1400 |     6  (17)| 00:00:01 |
+|   5 |      TABLE ACCESS BY INDEX ROWID| OPCIONES    |     7 |    91 |     2   (0)| 00:00:01 |
+|   6 |       INDEX FULL SCAN           | SYS_C007130 |     7 |       |     1   (0)| 00:00:01 |
+|*  7 |      SORT JOIN                  |             |    35 |   945 |     4  (25)| 00:00:01 |
+|   8 |       TABLE ACCESS FULL         | VEHICULOS   |    35 |   945 |     3   (0)| 00:00:01 |
+|   9 |     TABLE ACCESS FULL           | FACTURAS    |    34 |   442 |     3   (0)| 00:00:01 |
+|  10 |    TABLE ACCESS FULL            | VENDEDORES  |    20 |   200 |     3   (0)| 00:00:01 |
+|  11 |   TABLE ACCESS FULL             | CLIENTES    |    51 |   510 |     3   (0)| 00:00:01 |
+-----------------------------------------------------------------------------------------------
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+ 
+   1 - access("F"."CLIENTE_ID"="C"."ID_CLIENTE")
+   2 - access("F"."VENDEDOR_ID"="VE"."ID_VENDEDOR")
+   3 - access("F"."VEHICULO_ID"="V"."ID_VEHICULO")
+   7 - access("V"."OPCION_ID"="OP"."ID_OPCIONES")
+       filter("V"."OPCION_ID"="OP"."ID_OPCIONES")
